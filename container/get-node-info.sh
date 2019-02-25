@@ -21,15 +21,21 @@
 ver=$(./get-version.sh)
 type="CROWN_SN"
 mn_status="$(crown-cli -rpcuser=healthcheck -rpcpassword=healthcheck_pass -rpcport=10000 systemnode status | jq .status)"
+block_count="$(crown-cli getblockchaininfo | jq .blocks)"
+sync_status="$(crown-cli mnsync status | jq .IsBlockchainSynced)"
 
 printf "\
 TYPE: %s \n\
 VERSION: %s \n\
-SN_STATUS: %s \n\
-" "$type" "$ver" "$mn_status" > /home/crown/.crown/node.info
+MN_STATUS: %s \n\
+BLOCKS: %s \n\
+SYNCED: %s \n\
+" "$type" "$ver" "$mn_status" "$block_count" "$sync_status" > /home/crown/.crown/node.info
 
 printf "\
 TYPE: %s \n\
 VERSION: %s \n\
-SN_STATUS: %s \n\
-" "$type" "$ver" "$mn_status"
+MN_STATUS: %s \n\
+BLOCKS: %s \n\
+SYNCED: %s \n\
+" "$type" "$ver" "$mn_status" "$block_count" "$sync_status"
