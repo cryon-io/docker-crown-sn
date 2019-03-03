@@ -5,7 +5,7 @@ Docker template for CROWN System Node.
 
 CROWN Donations: `16a1Ekv3tFNGX7YmzKLcdJnSam61BrNFrH`
 
-[Quickstart Guide](https://github.com/cryon-io/docker-crown-sn/wiki/Quickstart---ANS)
+[Quick Start Guide](https://github.com/cryon-io/docker-crown-sn/wiki/Quickstart---ANS)
 
 ## Prerequisites 
 
@@ -22,7 +22,7 @@ CROWN Donations: `16a1Ekv3tFNGX7YmzKLcdJnSam61BrNFrH`
 2. one of commands below depending of your preference (run as *root* or use *sudo*)
     - `./ans --full --node=CROWN_SN` # full setup of Ether1 SN/MN for current user
     - `./ans --full --user=[user] --node=CROWN_SN --auto-update-level=[level] -sp=ip=[external ip] -sp=nodeprivkey=[MN privkey]` 
-        * full setup of CROWN SN for defined user (directory location and structure is preserved) sets specified auto update level (Refer to Autoupdates)
+        * full setup of CROWN SN for defined user (directory location and structure is preserved) sets specified auto update level (Refer to Auto updates)
         * Do not forget to set master node **external ip** and **privkey**. This is required only first time.
 3.  logout, login and check node status
     - `./ans --node-info`

@@ -20,7 +20,7 @@
 
 BASEDIR=$(dirname "$0")
 
-if [ ! -d "$BASEDIR/../data/block" ]; then 
+if [ ! -d "$BASEDIR/../data/blocks" ]; then 
     printf "loading chain bootstrap"
     curl -L "https://nextcloud.crown.tech/nextcloud/s/GtiFnNoakxSyYyk/download" -o "$BASEDIR/../data/bootstrap.zip"
     unzip -o "$BASEDIR/../data/bootstrap.zip" -d "$BASEDIR/../data/"
