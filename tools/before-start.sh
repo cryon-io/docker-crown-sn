@@ -25,4 +25,6 @@ if [ ! -d "$BASEDIR/../data/blocks" ]; then
     curl -L "https://nextcloud.crown.tech/nextcloud/s/GtiFnNoakxSyYyk/download" -o "$BASEDIR/../data/bootstrap.zip"
     unzip -o "$BASEDIR/../data/bootstrap.zip" -d "$BASEDIR/../data/"
     rm "$BASEDIR/../data/bootstrap.zip"
+    sh "$BASEDIR/fs-permissions.sh"
 fi
+exit 0
